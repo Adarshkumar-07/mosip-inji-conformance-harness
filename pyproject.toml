@@ -16,6 +16,10 @@ test = ["pytest>=8.0"]
 [project.scripts]
 inji-conformance = "conformance_harness.cli:main"
 
+[tool.setuptools.packages.find]
+include = ["conformance_harness*"]
+exclude = ["tests*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
